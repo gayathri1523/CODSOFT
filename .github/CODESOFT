@@ -1,0 +1,21 @@
+def simple_chatbot(user_input):
+    # Define some rules
+    greetings = ["hello", "hi", "hey"]
+    farewells = ["bye", "goodbye"]
+    questions = ["how are you", "what's up", "how's it going"]
+    
+    # Check user input against rules
+    if user_input.lower() in greetings:
+        return "Hello! How can I assist you today?"
+    elif user_input.lower() in farewells:
+        return "Goodbye! Have a great day!"
+    elif user_input.lower() in questions:
+        return "I'm just a chatbot, but I'm here to help!"
+    else:
+        return "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+# Test the chatbot
+while True:
+    user_input = input("You: ")
+    response = simple_chatbot(user_input)
+    print("Bot:", response)
